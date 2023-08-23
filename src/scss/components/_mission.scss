@@ -1,9 +1,9 @@
 .mission {
   background-color: var(--white);
-  padding-bottom: 270px;
 
   &__list {
     --mission-gap: 94px;
+    margin-bottom: 27px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: calc(var(--mission-gap) * 2)
@@ -17,9 +17,9 @@
     background-repeat: no-repeat;
     background-size: 48px 48px;
 
-    &:not(:last-child){
-      &::after{
-        content:"";
+    &:not(:last-child) {
+      &::after {
+        content: "";
         position: absolute;
         right: calc(-1 * var(--mission-gap));
         top: 0;
@@ -45,7 +45,7 @@
     }
   }
 
-  &__subtitle{
+  &__subtitle {
     margin: 0;
     margin-bottom: 10px;
     font-weight: 700;
@@ -54,11 +54,43 @@
     color: var(--gray-900);
   }
 
-  &__descr{
+  &__descr {
     margin: 0;
     font-weight: 400;
     font-size: 16px;
     line-height: 160%;
     color: var(--gray-700);
+  }
+}
+
+.know-form {
+  position: relative;
+  top: 92px;
+  border-radius: 4px;
+  padding: 48px 60px;
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+  background: var(--white);
+
+  &__title {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 33px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    color: var(--gray-900);
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__field {
+    margin-right: 24px;
+  }
+
+  &__btn {
+    padding: 11px 29px;
   }
 }
