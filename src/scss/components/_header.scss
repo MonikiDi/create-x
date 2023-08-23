@@ -1,0 +1,17 @@
+.header{
+  padding-top: 23px;
+  padding-bottom: 21px;
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__nav{
+    margin-left: -112px;
+  }
+
+  &--main{
+    background-color: var(--white);
+  }
+}
