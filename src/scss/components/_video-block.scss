@@ -4,6 +4,17 @@
   overflow: hidden;
   border-radius: 4px;
 
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    background-color: rgba(#1e212c, 0.6);
+  }
+
   &__content{
     display: block;
     width: 100%;
@@ -12,6 +23,43 @@
   }
 
   &__play{
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 100%;
     background-color: var(--primary);
+    transform: translate(-50%, -50%);
+
+    svg{
+      width: 26px;
+      height: 26px;
+      fill: white;
+    }
+  }
+
+  &__mudes{
+    position: absolute;
+    z-index: 10;
+    bottom: 32px;
+    left: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: rgba(#fff, 0.12);
+
+    svg{
+      width: 20px;
+      height: 20px;
+      fill: white;
+    }
   }
 }
