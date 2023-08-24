@@ -1,8 +1,109 @@
 .services-section {
-    padding-top: 212px;
-    background-image: url(../img/services-bg.jpg);
+  padding-bottom: 50px;
+  padding-top: 212px;
+  background-image: url(../img/services-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background: var(--gray-200, #F4F5F6);
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.services-item {
+  display: block;
+  padding: 0 10px;
+  padding-top: 87px;
+  padding-bottom: 90px;
+  position: relative;
+  box-shadow: 0px 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+  background: var(--white);
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: inherit;
+    opacity: 0;
+    z-index: 3;
+    transition: opacity 0.3s ease-in-out;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background: var(--gray-200, #F4F5F6);
+    background-color: #424551;
+  }
+
+  &::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-radius: inherit;
+    z-index: 5;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    background-color: rgba(#1e212c, 0.6);
+  }
+
+  &__content{
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-bottom: 23px;
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    fill: var(--primary);
+    transition: fill 0.3s ease-in-out;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--gray-900);
+    transition: color 0.3s ease-in-out;
+  }
+
+  &--construct{
+    &::before{
+      background-image: url("../img/services-1.jpg");
+    }
+  }
+
+  &:hover{
+    &::before{
+      opacity: 1;
+    }
+
+    &::after{
+    opacity: 1;
+    }
+
+    .services-item__icon{
+      fill: var(--white);
+    }
+
+    .services-item__title{
+      color: var(--white);
+    }
+  }
 }
