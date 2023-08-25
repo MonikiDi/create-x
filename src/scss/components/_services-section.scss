@@ -7,21 +7,6 @@
   background-size: cover;
   background: var(--gray-200, #F4F5F6);
 
-  &__learn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__subtitle{
-    margin: 0;
-    margin-right: 40px;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 150%;
-    color: var(--gray-900);
-  }
-
   &__list{
     margin-bottom: 80px;
   }
@@ -30,7 +15,7 @@
 .services-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: var(--grid-gap);
 }
 
 .services-item {
