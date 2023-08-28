@@ -13,10 +13,6 @@ const portSlider = document.querySelector('.portfolio-section__items');
 const portfolioSlider = new Swiper('.portfolio-section__items', {
   slidesPerView: 3,
   spaceBetween: gap,
-  navigation: {
-    nextEl: '.portfolio-section__next',
-    prevEl: '.portfolio-section__prev',
-  },
   on: {
     init: function () {
       const activeSlide = portSlider.querySelector('.swiper-slide-active');
@@ -27,6 +23,10 @@ const portfolioSlider = new Swiper('.portfolio-section__items', {
       nextActiveSlide.classList.add('slider-visible');
       nextNextActiveSlide.classList.add('slider-visible');
     },
+  },
+  navigation: {
+    nextEl: '.portfolio-section__next',
+    prevEl: '.portfolio-section__prev',
   },
 });
 
@@ -61,4 +61,14 @@ document.querySelector('.portfolio-section__next').addEventListener('click', () 
   activeSlide.classList.add('slider-visible');
   nextActiveSlide.classList.add('slider-visible');
   nextNextActiveSlide.classList.add('slider-visible');
+});
+
+const testimonialsSlider = new Swiper('.testimonials__items', {
+  slidesPerView: 1,
+  spaceBetween: gap,
+  loop: true,
+  navigation: {
+    nextEl: '.testimonials__next',
+    prevEl: '.testimonials__prev',
+  },
 });
