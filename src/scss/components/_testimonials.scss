@@ -1,9 +1,13 @@
 .testimonials{
-  padding: 97px 0;
+  padding-top: 97px;
   background: var(--gray-200);
 
   &__content{
     max-width: 612px;
+  }
+
+  &__images {
+    margin-bottom: -60px;
   }
 
   &__title {
