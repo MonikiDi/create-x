@@ -1,0 +1,55 @@
+.contacts-section {
+  padding-top: 80px;
+  padding-bottom: 77px;
+  background-image: url("../../img/contacts-section.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--gray-900);
+
+
+  &__form {
+    background-color: var(--white);
+  }
+
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.contacts-form {
+  max-width: 495px;
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--gray-300);
+  box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.05), 0px 12px 10px -6px rgba(30, 33, 44, 0.08), 0px 26px 24px -10px rgba(30, 33, 44, 0.1), 0px 60px 80px -20px rgba(30, 33, 44, 0.16);
+  background: var(--white);
+
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--gray-900);
+  }
+
+  &__field {
+    margin-bottom: 21px;
+  }
+
+  &__checkbox {
+    margin-bottom: 22px;
+  }
+
+  &__btn {
+    padding: 12px 31px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+  }
+}

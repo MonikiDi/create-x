@@ -20,8 +20,15 @@
         border-radius: 4px;
         width: 260px;
         height: 44px;
+
         &::placeholder{
             color: var(--gray-600);
+        }
+
+        &--big {
+          padding-top: 10px;
+          height: 66px;
+          resize: none;
         }
     }
 
@@ -33,4 +40,12 @@
         }
     }
 
+  &--gray {
+    width: 100%;
+
+    .form-field__input {
+      width: 100%;
+      background: var(--gray-200);
+    }
+  }
 }
