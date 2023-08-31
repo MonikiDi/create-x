@@ -23,6 +23,4 @@ circles.forEach(el => {
     progress.setAttribute('stroke-dasharray', circleLength);
     progress.setAttribute('stroke-dashoffset', circleLength - circleLength * percentageProgress / 100);
   }
-
-
 });

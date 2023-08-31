@@ -23,8 +23,11 @@
 @import "./components/footer";
 
 // services-content.html
-@import "./components/hero-services";
+@import "./components/page-hero";
 @import "./components/services-content";
+
+// services-1
+@import "./components/we-offer";
 
 // подключения компонентов страницы маленькие компоненты)
 @import "./components/nav";
