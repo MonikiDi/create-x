@@ -8,6 +8,8 @@
 
   &__images {
     margin-bottom: -60px;
+    position: relative;
+    z-index: 5;
   }
 
   &__title {
