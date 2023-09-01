@@ -1,0 +1,123 @@
+.pricing {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 40px;
+  background: var(--gray-200);
+
+  &__decorate {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  &__descr {
+    margin-bottom: 60px;
+  }
+}
+
+.table-wrapper {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  overflow: hidden;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  box-shadow: 0 4px 4px -4px rgba(30, 33, 44, 0.03), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 80px 80px -20px rgba(154, 156, 165, 0.08);
+  background: var(--white);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+
+  &__heading {
+    margin-bottom: 2px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 150%;
+    color: var(--gray-900);
+    text-transform: uppercase;
+  }
+
+  &__per {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--gray-700);
+  }
+
+  &__th {
+    padding-top: 31px;
+    padding-right: 20px;
+    padding-bottom: 24px;
+
+    &:first-child {
+      vertical-align: bottom;
+      padding-left: 24px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 150%;
+      color: var(--gray-900);
+    }
+  }
+
+  &__body {
+    .table__row {
+      &:nth-child(odd){
+        background: var(--gray-200);
+      }
+
+      &:last-child {
+        .table__col {
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+
+  &__col {
+    padding: 16px 0;
+    padding-right: 10px;
+    vertical-align: middle;
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--gray-800);
+
+    &:first-child {
+      padding-left: 24px;
+      text-align: left;
+    }
+
+    .btn {
+      padding: 0 20px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 36px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__check {
+    vertical-align: middle;
+    font-size: 0;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../../img/table-check.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--gray-800);
+  }
+}
