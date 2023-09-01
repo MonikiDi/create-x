@@ -8,8 +8,10 @@
   --gap: 20px;
   display: flex;
   align-items: center;
+
   &__item {
     width: calc((100% - (var(--gap)) * 4) / 5);
+
     &:not(:last-child){
       margin-right: var(--gap);
     }
@@ -32,6 +34,7 @@
     &--active {
       color: var(--white);
       background-color: var(--primary);
+      pointer-events: none;
 
       .portfolio-tabs-nav__text {
         color: var(--white);
@@ -47,6 +50,7 @@
     object-fit: cover;
     color: inherit;
     fill: currentColor;
+    pointer-events: none;
   }
 
   &__text {
@@ -55,13 +59,23 @@
     line-height: 160%;
     text-align: center;
     color: var(--gray-600);
+    pointer-events: none;
     transition: color 0.3s ease-in-out;
   }
 
 }
 .portfolio-tabs {
   &__item {
+    display: none;
     grid-column: 4 span;
+
+    &--visible {
+      display: block;
+    }
+
+    &--visible-more {
+      display: block !important;
+    }
   }
 }
 
