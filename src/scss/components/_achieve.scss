@@ -1,45 +1,130 @@
 .achieve {
-    padding-top: 120px;
-    &__item {
-        padding-top: 70px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        grid-column: 3 span;
-        background-size: 48px 48px;
-        background-position: top center;
-        background-repeat: no-repeat;
-        
-        &--reccom {
-            background-image: url(../../img/like.svg);
-        }
+  padding-top: 120px;
+  background-color: var(--white);
+  background-image: url(../../img/achieve-bg.png);
+  background-position: right bottom -646px;
+  background-repeat: no-repeat;
 
-        &--renov {
-            background-image: url(../../img/painting.svg);
-        }
+  &__list {
+    margin-bottom: 260px;
+  }
 
-        &--spec {
-            background-image: url(../../img/helmet.svg);
-        }
+  &__item {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column: 3 span;
+    background-size: 48px 48px;
+    background-position: top center;
+    background-repeat: no-repeat;
 
-        &--finish {
-            background-image: url(../../img/pantone.svg);
-        }
+    &--reccom {
+      background-image: url(../../img/like.svg);
     }
 
-    &__value {
-        margin-bottom: 10px;
-        font-weight: 700;
-        font-size: 46px;
-        line-height: 130%;
-        color: var(--primary);
+    &--renov {
+      background-image: url(../../img/painting.svg);
     }
 
-    &__text {
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 150%;
-        text-align: center;
-        color: var(--gray-900);
+    &--spec {
+      background-image: url(../../img/helmet.svg);
     }
+
+    &--finish {
+      background-image: url(../../img/pantone.svg);
+    }
+  }
+
+  &__value {
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 130%;
+    color: var(--primary);
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--gray-900);
+  }
+
+  &__content {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__info {
+    position: relative;
+    padding: 80px;
+    padding-right: 40px;
+    padding-bottom: 60px;
+    z-index: 10;
+    top: -130px;
+    left: -30px;
+    flex-shrink: 0;
+    width: 735px;
+    border-radius: 4px;
+    box-shadow: var(--main-shadow);
+    background: var(--white);
+  }
+}
+
+.quote {
+  margin: 0;
+
+  &__content {
+    position: relative;
+    padding: 9px 53px;
+    margin-bottom: 31px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -2px;
+      top: 8px;
+      width: 28px;
+      height: 20px;
+      background-image: url(../../img/braces.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    p {
+      margin: 0;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 150%;
+      color: var(--gray-900);
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__footer {
+    padding: 20px 54px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--gray-700);
+    background-image: url(../../img/signature.svg);
+    background-size: 100px 68px;
+    background-position: right 65px center;
+    background-repeat: no-repeat;
+  }
+
+  &__author {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--gray-900);
+  }
 }
