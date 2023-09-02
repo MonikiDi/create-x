@@ -20,6 +20,19 @@
     letter-spacing: 1px;
     color: var(--gray-900);
     text-transform: uppercase;
+
+    &--small {
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 120%;
+      letter-spacing: 1px;
+      color: var(--gray-900);
+      text-transform: initial;
+    }
+
+    &--mb {
+      margin-bottom: 60px;
+    }
   }
 
   &__descr {
@@ -41,5 +54,11 @@
 
   &--work {
     background-image: url("../../img/work-hero-bg.png");
+  }
+
+  &--work-inner {
+    background-color: var(--white);
+    background-image: url("../../img/work-hero-inner-bg.png");
+    background-position: right -8px top 48px;
   }
 }
