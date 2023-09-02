@@ -1,0 +1,45 @@
+.achieve {
+    padding-top: 120px;
+    &__item {
+        padding-top: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-column: 3 span;
+        background-size: 48px 48px;
+        background-position: top center;
+        background-repeat: no-repeat;
+        
+        &--reccom {
+            background-image: url(../../img/like.svg);
+        }
+
+        &--renov {
+            background-image: url(../../img/painting.svg);
+        }
+
+        &--spec {
+            background-image: url(../../img/helmet.svg);
+        }
+
+        &--finish {
+            background-image: url(../../img/pantone.svg);
+        }
+    }
+
+    &__value {
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 130%;
+        color: var(--primary);
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 150%;
+        text-align: center;
+        color: var(--gray-900);
+    }
+}
