@@ -61,4 +61,10 @@
     background-image: url("../../img/work-hero-inner-bg.png");
     background-position: right -8px top 48px;
   }
+
+  &--about {
+    background-color: var(--gray-200);
+    background-image: url("../../img/about-hero-bg.png");
+    background-position: right -2px;
+  }
 }
