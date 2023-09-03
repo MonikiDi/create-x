@@ -1,0 +1,125 @@
+.positions-content {
+  padding: 121px 0;
+  background-color: var(--white);
+
+  &__left {
+    grid-column: 7 span;
+  }
+
+  &__right {
+    grid-column: 5 span;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+
+.positions-list {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.positions-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 40px;
+  border: 1px solid var(--gray-300);
+  border-radius: 4px;
+  background: var(--white);
+
+  &__meta {
+    margin-bottom: 7px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--gray-700);
+  }
+
+  &__city {
+    position: relative;
+    margin-right: 21px;
+    padding-left: 23px;
+    background-image: url(../../img/city.svg);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: left center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -13px;
+      top: 50%;
+      width: 1px;
+      height: 11px;
+      background-color: currentColor;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__time {
+    padding-left: 23px;
+    background-image: url(../../img/clock.svg);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: left center;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--gray-900);
+  }
+
+  &__link {
+    display: inline-block;
+    padding: 11px 30px;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--primary);
+  }
+}
+
+.positions-looking {
+  width: 390px;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 24px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    color: var(--gray-900);
+  }
+
+  &__descr {
+    margin: 0;
+    margin-bottom: 48px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--gray-800);
+  }
+
+  &__btn {
+
+    &--subs {
+      padding-left: 44px;
+      padding-right: 44px;
+      margin-right: 22px;
+    }
+
+    &--send {
+      padding-left: 54px;
+      padding-right: 54px;
+    }
+  }
+}
