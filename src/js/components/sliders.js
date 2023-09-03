@@ -1,5 +1,5 @@
 import Swiper from 'swiper';
-import { Navigation, Pagination ,Thumbs} from 'swiper/modules';
+import { Navigation, Pagination, Thumbs } from 'swiper/modules';
 
 Swiper.use([Navigation, Pagination, Thumbs]);
 
@@ -8,8 +8,10 @@ const bodyStyles = window.getComputedStyle(document.body);
 const gap = parseInt(bodyStyles.getPropertyValue('--grid-gap'));
 
 
+// portfolio slider
+
 const portSlider = document.querySelector('.portfolio-section__items');
-const relatedSlider = document.querySelector('.related-projects__items');
+
 
 if (portSlider) {
   const portfolioSlider = new Swiper(portSlider, {
@@ -66,6 +68,10 @@ if (portSlider) {
   });
 }
 
+// related slider
+
+const relatedSlider = document.querySelector('.related-projects__items');
+
 if (relatedSlider) {
   const relatedProjSlider = new Swiper(relatedSlider, {
     slidesPerView: 3,
@@ -121,6 +127,7 @@ if (relatedSlider) {
   });
 }
 
+// testimonials slider
 
 const testimonialsSlider = new Swiper('.testimonials__items', {
   slidesPerView: 1,
@@ -131,6 +138,8 @@ const testimonialsSlider = new Swiper('.testimonials__items', {
     prevEl: '.testimonials__prev',
   },
 });
+
+// work slider
 
 const workImages = document.querySelector('.work-images-slider')
 
@@ -151,6 +160,49 @@ if (workImages) {
     thumbs: {
       swiper: workSlider,
     },
+  });
+}
+
+// history slider
+
+const historySlider = document.querySelector('.history-slider');
+
+if (historySlider) {
+  const workSlider = new Swiper(historySlider, {
+    spaceBetween: 20,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: ".history__next",
+      prevEl: ".history__prev",
+    },
+  });
+
+  workSlider.on('slideChange', function () {
+    console.log(workSlider.realIndex);
+
+    historyBtns.forEach(el => {
+      el.classList.remove('history-nav__btn--active');
+    });
+
+    document.querySelector(`.history-nav__btn[data-index="${workSlider.realIndex}"]`).classList.add('history-nav__btn--active');
+  });
+
+  const historyBtns = document.querySelectorAll('.history-nav__btn');
+
+  historyBtns.forEach((el, idx) => {
+    el.setAttribute('data-index', idx);
+
+    el.addEventListener('click', (e) => {
+      const index = e.currentTarget.dataset.index;
+
+      historyBtns.forEach(el => {
+        el.classList.remove('history-nav__btn--active');
+      });
+
+      e.currentTarget.classList.add('history-nav__btn--active');
+
+      workSlider.slideTo(index);
+    });
   });
 }
 
