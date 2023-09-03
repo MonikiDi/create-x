@@ -67,4 +67,10 @@
     background-image: url("../../img/about-hero-bg.png");
     background-position: right -2px;
   }
+
+  &--positions {
+    background-color: var(--gray-200);
+    background-image: url("../../img/positions-hero-bg.png");
+    background-position: right bottom;
+  }
 }
