@@ -73,4 +73,10 @@
     background-image: url("../../img/positions-hero-bg.png");
     background-position: right bottom;
   }
+
+  &--news {
+    background-color: var(--gray-200);
+    background-image: url("../../img/news-hero-bg.png");
+    background-position: right;
+  }
 }
