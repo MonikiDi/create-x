@@ -15,6 +15,10 @@
 		margin-bottom: 13px;
 	}
 
+	&__meta {
+		margin-bottom: 17px;
+	  }
+
 	&__link {
 		font-weight: 700;
 		font-size: 20px;
@@ -51,7 +55,6 @@
 	font-size: 14px;
 	line-height: 150%;
 	color: var(--gray-700);
-	margin-bottom: 17px;
 
 
 	&__item {
