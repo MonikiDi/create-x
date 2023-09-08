@@ -140,4 +140,10 @@
       text-transform: initial;
     }
   }
+
+  &--contacts {
+    background-color: var(--gray-200);
+    background-image: url("../../img/contacts-hero-bg.png");
+    background-position: right;
+  }
 }
