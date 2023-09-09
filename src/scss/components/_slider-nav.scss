@@ -24,9 +24,19 @@
       fill: currentColor;
     }
 
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--primary);
+    }
+
     &:hover{
       color: var(--white);
       background-color: var(--primary);
+    }
+
+    &:active{
+      color: var(--white);
+      background-color: var(--active);
     }
   }
 }

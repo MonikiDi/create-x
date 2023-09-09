@@ -22,9 +22,23 @@
     font-size: 14px;
     line-height: 150%;
     color: var(--gray-800);
+    transition: color 0.3s ease-in-out;
 
     &:not([href]){
       color: var(--gray-600);
+    }
+
+    &:focus {
+      outline-offset: 1px;
+      outline: 2px solid var(--primary);
+    }
+
+    &:hover {
+      color: var(--primary);
+    }
+
+    &:active {
+      color: var(--active);
     }
   }
 }

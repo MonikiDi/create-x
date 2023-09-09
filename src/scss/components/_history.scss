@@ -81,6 +81,19 @@
       background-color: currentColor;
     }
 
+    &:focus {
+      outline: none;
+      color: var(--primary);
+    }
+
+    &:hover {
+      color: var(--primary);
+    }
+
+    &:active {
+      color: var(--primary);
+    }
+
     &--active {
       color: var(--primary);
     }

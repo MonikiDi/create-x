@@ -30,6 +30,11 @@
           height: 66px;
           resize: none;
         }
+
+        &:focus {
+          outline-offset: 2px;
+          outline: 2px solid var(--primary);
+        }
     }
 
     &--big{

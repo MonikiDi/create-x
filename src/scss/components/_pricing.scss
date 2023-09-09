@@ -99,6 +99,11 @@
       line-height: 36px;
       letter-spacing: 0.5px;
       text-transform: uppercase;
+
+      &:focus {
+        outline-offset: 2px;
+        outline: 2px solid var(--primary);
+      }
     }
   }
 

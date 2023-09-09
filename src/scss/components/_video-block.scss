@@ -35,11 +35,25 @@
     border-radius: 100%;
     background-color: var(--primary);
     transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease-in-out;
 
     svg{
       width: 26px;
       height: 26px;
       fill: white;
+    }
+    
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--primary);
+    }
+
+    &:hover {
+      background-color: var(--active);
+    }
+
+    &:active {
+      background-color: var(--active);
     }
   }
 
@@ -55,11 +69,25 @@
     height: 40px;
     border-radius: 100%;
     background-color: rgba(#fff, 0.12);
+    transition: background-color 0.3s ease-in-out;
 
     svg{
       width: 20px;
       height: 20px;
       fill: white;
+    }
+
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--primary);
+    }
+
+    &:hover {
+      background-color: rgba($color: #fff, $alpha: 0.4);
+    }
+
+    &:active {
+      background-color: rgba($color: #fff, $alpha: 0.4);
     }
   }
 }

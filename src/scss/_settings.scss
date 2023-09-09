@@ -157,9 +157,23 @@ a {
   text-transform: uppercase;
   text-align: center;
   color: var(--white);
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 
   &--fill{
     background-color: var(--primary);
+
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--primary);
+    }
+
+    &:hover {
+      background-color: var(--active);
+    }
+
+    &:active {
+      background-color: var(--active);
+    }
   }
   &--stroke{
     &-light{
@@ -169,6 +183,21 @@ a {
     &-primary{
       border-color: var(--primary);
       color: var(--primary);
+    }
+    
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--primary);
+    }
+
+    &:hover {
+      border-color: var(--primary);
+      background-color: var(--primary);
+    }
+
+    &:active {
+      border-color: var(--primary);
+      background-color: var(--active);
     }
   }
 }

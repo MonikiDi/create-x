@@ -93,6 +93,11 @@
     }
   }
 
+  &:focus {
+    outline-offset: 2px;
+    outline: 2px solid var(--primary);
+  }
+
   &:hover{
     &::before{
       opacity: 1;

@@ -2,6 +2,7 @@
   position: relative;
   padding-bottom: 100px;
 }
+
 .portfolio-tabs-nav {
   margin-bottom: 61px;
   transform: translateY(-60px);
@@ -12,7 +13,7 @@
   &__item {
     width: calc((100% - (var(--gap)) * 4) / 5);
 
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: var(--gap);
     }
   }
@@ -64,6 +65,7 @@
   }
 
 }
+
 .portfolio-tabs {
   &__item {
     display: none;
@@ -87,6 +89,20 @@
   font-size: 16px;
   line-height: 160%;
   color: var(--gray-800);
+  transition: color 0.3s ease-in-out;
+
+  &:focus {
+    outline-offset: 2px;
+    outline: 2px solid var(--primary);
+  }
+
+  &:hover {
+    color:  var(--primary);
+  }
+
+  &:active {
+    color:  var(--active);
+  }
 
   svg {
     margin-right: 16px;
@@ -94,5 +110,18 @@
     height: 24px;
     color: inherit;
     fill: currentColor;
+  }
+}
+
+.portfolio-tabs-nav__btn {
+  &:focus {
+    outline-offset: 2px;
+    outline: 2px solid var(--primary);
+  }
+
+  &:hover {
+    .portfolio-tabs-nav__text {
+      color: var(--gray-900);
+    }
   }
 }

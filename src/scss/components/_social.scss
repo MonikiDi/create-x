@@ -12,6 +12,24 @@
     display: block;
     width: 24px;
     height: 24px;
+    
+
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--primary);
+    }
+
+    &:hover {
+      svg {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      svg {
+        opacity: 1;
+      }
+    }
 
     svg {
       display: block;
@@ -20,6 +38,7 @@
       fill: var(--white);
       object-fit: cover;
       opacity: 0.6;
+      transition: opacity 0.3s ease-in-out;
     }
   }
 

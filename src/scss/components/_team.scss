@@ -64,6 +64,20 @@
     a {
       border-bottom: 1px solid currentColor;
       color: var(--primary);
+      transition: color 0.3s ease-in-out;
+
+      &:focus {
+        outline-offset: 2px;
+        outline: 2px solid var(--primary);
+      }
+
+      &:hover {
+        color: var(--active);
+      }
+
+      &:active {
+        color: var(--active);
+      }
     }
   }
 }

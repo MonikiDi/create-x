@@ -1,12 +1,21 @@
 .partners {
   padding: 80px 0;
   background: var(--gray-200);
+
   &__list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 102px;
   }
+
   &__title{
     margin-bottom: 60px;
+  }
+
+  &__link {
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--primary);
+    }
   }
 }

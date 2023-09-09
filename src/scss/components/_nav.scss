@@ -15,6 +15,20 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--gray-800);
+    transition: color 0.3s ease-in-out;
+
+    &:focus {
+      outline-offset: 2px;
+      outline: 2px solid var(--primary);
+    }
+
+    &:hover {
+      color: var(--primary);
+    }
+
+    &:active {
+      color: var(--active);
+    }
 
     &--current {
       color: var(--primary);

@@ -17,13 +17,27 @@
 
 	&__meta {
 		margin-bottom: 17px;
-	  }
+	}
 
 	&__link {
 		font-weight: 700;
 		font-size: 20px;
 		line-height: 150%;
 		color: var(--gray-900);
+		transition: color 0.3s ease-in-out;
+
+		&:focus {
+			outline-offset: 2px;
+			outline: 2px solid var(--primary);
+		}
+
+		&:hover {
+			color: var(--primary);
+		}
+
+		&:active {
+			color: var(--active);
+		}
 	}
 
 	&__descr {
@@ -55,6 +69,7 @@
 	font-size: 14px;
 	line-height: 150%;
 	color: var(--gray-700);
+	transition: color 0.3s ease-in-out;
 
 
 	&__item {
@@ -84,5 +99,20 @@
 			background-size: 16px 16px;
 			background-repeat: no-repeat;
 		}
+	}
+}
+
+a.article-meta__item {
+	&:focus {
+		outline-offset: 2px;
+		outline: 2px solid var(--primary);
+	}
+
+	&:hover {
+		color: var(--primary);
+	}
+
+	&:active {
+		color: var(--active);
 	}
 }
