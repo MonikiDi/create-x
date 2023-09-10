@@ -36,7 +36,8 @@ a {
 }
 
 .is-hidden {
-  display: none !important; /* stylelint-disable-line declaration-no-important */
+  display: none !important;
+  /* stylelint-disable-line declaration-no-important */
 }
 
 .btn-reset {
@@ -111,7 +112,7 @@ a {
   position: relative;
 }
 
-.main-title{
+.main-title {
   margin: 0;
   margin-bottom: 25px;
   font-weight: 700;
@@ -121,29 +122,29 @@ a {
   color: var(--gray-900);
   text-transform: uppercase;
 
-  span{
+  span {
     color: var(--primary);
   }
 
-  &--home{
+  &--home {
     color: var(--white);
   }
 }
 
-.main-descr{
+.main-descr {
   margin: 0;
   font-weight: 400;
   font-size: 20px;
   line-height: 150%;
   color: var(--gray-700);
 
-  &--home{
+  &--home {
     margin-bottom: 60px;
     color: var(--white);
   }
 }
 
-.btn{
+.btn {
   display: inline-block;
   padding: 15px 39px;
   border-width: 1px;
@@ -159,7 +160,7 @@ a {
   color: var(--white);
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 
-  &--fill{
+  &--fill {
     background-color: var(--primary);
 
     &:focus {
@@ -175,16 +176,18 @@ a {
       background-color: var(--active);
     }
   }
-  &--stroke{
-    &-light{
+
+  &--stroke {
+    &-light {
       border-color: var(--white);
       color: var(--white);
     }
-    &-primary{
+
+    &-primary {
       border-color: var(--primary);
       color: var(--primary);
     }
-    
+
     &:focus {
       outline-offset: 2px;
       outline: 2px solid var(--primary);
@@ -202,7 +205,7 @@ a {
   }
 }
 
-.title{
+.title {
   margin: 0;
   margin-bottom: 25px;
   font-weight: 700;
@@ -210,12 +213,12 @@ a {
   line-height: 130%;
   color: var(--gray-900);
 
-  &--center{
+  &--center {
     text-align: center;
   }
 }
 
-.descr{
+.descr {
   margin: 0;
   margin-bottom: 60px;
   font-weight: 400;
@@ -223,12 +226,12 @@ a {
   line-height: 150%;
   color: var(--gray-700);
 
-  &--center{
+  &--center {
     text-align: center;
   }
 }
 
-.section-offset{
+.section-offset {
   padding-top: 120px;
 }
 
@@ -354,4 +357,53 @@ a {
   gap: var(--grid-gap);
 }
 
+// to-top
 
+.to-top {
+  position: fixed;
+  bottom: 80px;
+  z-index: 100;
+  right: calc((100% - 1230px) / 2);
+  display: flex;
+  align-items: flex-end;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &__text {
+    margin-right: 16px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 150%;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 11px rgba(150, 150, 150, 1);
+  }
+
+  &__icon {
+    border-radius: 4px;
+    background-color: var(--primary);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease-in-out;
+
+    svg {
+      width: 24px;
+      height: 24px;
+      object-fit: cover;
+      fill: var(--white);
+    }
+
+    &:hover {
+      background-color: var(--active);
+    }
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}

@@ -35,7 +35,7 @@
   }
 
   &__btn{
-    display: none;
+    margin-bottom: -68px;
     margin-top: 24px;
     padding: 13px 31px;
     font-weight: 700;
@@ -43,9 +43,10 @@
     letter-spacing: 0px;
     text-transform: uppercase;
     color: var(--primary);
-
     border: 1px solid var(--primary);
     border-radius: 4px;
+    transition: 0.3s ease-in-out;
+    will-change: margin;
   }
 
   &:focus {
@@ -54,6 +55,8 @@
   }
 
   &:hover{
-    transform: translateY(-3px);
+    .portfolio-item__btn {
+      margin-bottom: 0;
+    }
   }
 }
