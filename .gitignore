@@ -2,3 +2,4 @@
 /app
 /.idea
 package-lock.json
+.vscode
