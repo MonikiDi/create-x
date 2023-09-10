@@ -24,8 +24,6 @@ class GraphAccordion {
   }
 
   event() {
-    console.log('event!');
-
     if (this.accordion) {
       this.accordion.addEventListener('click', (e) => {
         this.accordion.classList.toggle('open');

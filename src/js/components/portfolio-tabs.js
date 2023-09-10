@@ -65,7 +65,6 @@ if (portfolioTabsNav) {
     const visibleItems = document.querySelectorAll('.portfolio-tabs__item--visible');
 
     const path = document.querySelector('.portfolio-tabs-nav__btn--active').dataset.path;
-    console.log(path)
 
     if (path == 'all') {
       portfolioTabsItems.forEach(el => {

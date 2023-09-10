@@ -4,5 +4,6 @@ selects.forEach(el => {
     shouldSort: false,
     position: 'bottom',
     searchEnabled: false,
+    allowHTML: true,
   });
 });
