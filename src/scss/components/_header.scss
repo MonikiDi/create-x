@@ -1,6 +1,7 @@
 .header{
   padding-top: 23px;
   padding-bottom: 21px;
+
   &__container{
     display: flex;
     align-items: center;
@@ -15,7 +16,26 @@
     }
 
     @include tablet {
-      display: none;
+      position: fixed;
+      overflow-y: auto;
+      left: 0;
+      top: 0;
+      width: 80%;
+      padding: 50px;
+      height: 100vh;
+      display: block;
+      background-color: var(--white);
+      z-index: 1000;
+      transform: translateX(-150%);
+      transition: transform 0.3s ease-in-out;
+
+      &--active {
+        transform: none;
+      }
+    }
+
+    @include mobile {
+      padding: 20px;
     }
   }
 

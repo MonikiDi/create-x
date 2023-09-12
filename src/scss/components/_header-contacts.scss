@@ -15,6 +15,14 @@
   @include tablet {
     display: none;
   }
+
+  &--nav {
+    display: none;
+
+    @include tablet {
+      display: block;
+    }
+  }
 }
 
 .contacts-link{
@@ -64,5 +72,10 @@
     .contacts-link__value {
       color: var(--active);
     }
+  }
+
+  @include tablet {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
