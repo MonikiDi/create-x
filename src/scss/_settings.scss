@@ -122,6 +122,16 @@ a {
   color: var(--gray-900);
   text-transform: uppercase;
 
+  @include small-tablet {
+    font-size: 60px;
+    line-height: 75px;
+  }
+
+  @include mobile {
+    font-size: 35px;
+    line-height: 45px;
+  }
+
   span {
     color: var(--primary);
   }
@@ -141,6 +151,11 @@ a {
   &--home {
     margin-bottom: 60px;
     color: var(--white);
+  }
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -216,6 +231,11 @@ a {
   &--center {
     text-align: center;
   }
+
+  @include mobile {
+    font-size: 28px;
+    line-height: 40px;
+  }
 }
 
 .descr {
@@ -229,10 +249,24 @@ a {
   &--center {
     text-align: center;
   }
+
+  @include mobile {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 25px;
+  }
 }
 
 .section-offset {
   padding-top: 120px;
+
+  @include small-tablet {
+    padding-top: 60px;
+  }
+
+  @include mobile {
+    padding-top: 30px;
+  }
 }
 
 .custom-checkbox {
@@ -381,6 +415,10 @@ a {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: var(--grid-gap);
+
+  @include mobile {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // to-top
@@ -431,6 +469,11 @@ a {
   &--active {
     opacity: 1;
     visibility: visible;
+  }
+
+  @include big-desktop {
+    right: 20px;
+    bottom: 20px;
   }
 }
 

@@ -5,6 +5,7 @@
   &__title {
     margin-bottom: 60px;
   }
+
   &__list {
     counter-reset: section;
   }
@@ -18,7 +19,7 @@
     &::before {
       margin-bottom: 18px;
       counter-increment: section;
-      content: "0"counter(section);
+      content: "0" counter(section);
       font-weight: 700;
       font-size: 46px;
       line-height: 130%;
@@ -37,7 +38,16 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+
+        @include tablet {
+          display: none;
+        }
       }
+    }
+
+
+    @include tablet {
+      grid-column: 6 span;
     }
   }
 
@@ -57,4 +67,5 @@
     line-height: 160%;
     color: var(--gray-700);
   }
+
 }

@@ -4,11 +4,20 @@
 
     &__title {
         margin-bottom: 60px;
+
+        @include mobile {
+          margin-bottom: 40px;
+        }
     }
 
     &__item {
         &:not(:last-child) {
             margin-bottom: 58px;
         }
+    }
+
+
+    @include mobile {
+      padding: 40px 0;
     }
 }

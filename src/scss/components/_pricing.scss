@@ -24,6 +24,10 @@
   border-radius: 4px;
   box-shadow: var(--main-shadow);
   background: var(--white);
+
+  @include small-tablet {
+    overflow-x: auto;
+  }
 }
 
 .table {
@@ -104,6 +108,11 @@
         outline-offset: 2px;
         outline: 2px solid var(--primary);
       }
+
+
+    @include tablet {
+      padding: 0 10px;
+    }
     }
   }
 
@@ -124,5 +133,9 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--gray-800);
+  }
+
+  @include small-tablet {
+    width: 1200px;
   }
 }

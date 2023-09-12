@@ -2,11 +2,31 @@
   padding-top: 160px;
   padding-bottom: 119px;
   background: var(--white);
+
   &__list {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 102px;
+
+    @include minidesk {
+      gap: 30px;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
+
+  &__item {
+    @include tablet {
+      text-align: center;
+    }
+  }
+
   &__title{
     margin-bottom: 60px;
   }
@@ -16,5 +36,9 @@
       outline-offset: 2px;
       outline: 2px solid var(--primary);
     }
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }

@@ -16,6 +16,10 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  @include mobile {
+    padding: 40px 0;
+  }
 }
 
 .contacts-form {
@@ -51,5 +55,9 @@
     padding: 12px 31px;
     font-size: 14px;
     letter-spacing: 0.5px;
+  }
+
+  @include mobile {
+    padding: 15px;
   }
 }

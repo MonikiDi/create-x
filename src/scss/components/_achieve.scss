@@ -6,8 +6,22 @@
   background-position: right bottom -646px;
   background-repeat: no-repeat;
 
+  &__image {
+    @include minidesk {
+      max-width: 45%;
+    }
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
   &__list {
     margin-bottom: 260px;
+
+    @include mobile {
+      margin-bottom: 40px;
+    }
   }
 
   &__item {
@@ -35,6 +49,10 @@
     &--finish {
       background-image: url(../../img/pantone.svg);
     }
+
+    @include tablet {
+      grid-column: 6 span;
+    }
   }
 
   &__value {
@@ -43,6 +61,11 @@
     font-size: 46px;
     line-height: 130%;
     color: var(--primary);
+
+    @include minidesk {
+      font-size: 36px;
+      line-height: 50px;
+    }
   }
 
   &__text {
@@ -56,6 +79,10 @@
   &__content {
     display: flex;
     align-items: flex-start;
+
+    @include tablet {
+      display: block;
+    }
   }
 
   &__info {
@@ -71,6 +98,24 @@
     border-radius: 4px;
     box-shadow: var(--main-shadow);
     background: var(--white);
+
+    @include minidesk {
+      width: 55%;
+      left: 0;
+      top: 0;
+    }
+
+    @include tablet {
+      width: 100%;
+    }
+
+    @include mobile {
+      padding: 15px;
+    }
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }
 
@@ -93,6 +138,10 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
+
+      @include mobile {
+        left: 0;
+      }
     }
 
     p {
@@ -106,6 +155,12 @@
         margin-bottom: 30px;
       }
     }
+
+    @include mobile {
+      padding: 0;
+      padding-top: 40px;
+      padding-bottom: 20px;
+    }
   }
 
   &__footer {
@@ -118,6 +173,11 @@
     background-size: 100px 68px;
     background-position: right 65px center;
     background-repeat: no-repeat;
+
+    @include mobile {
+      background-position: bottom 30px center;
+      padding-bottom: 120px;
+    }
   }
 
   &__author {

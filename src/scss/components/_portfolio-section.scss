@@ -7,12 +7,29 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__title {
     margin: 0;
     padding-bottom: 12px;
     max-width: 710px;
+
+    @include tablet {
+      font-size: 40px;
+      line-height: 55px;
+    }
+
+    @include mobile {
+      padding-bottom: 0;
+      margin-bottom: 15px;
+      max-width: none;
+      font-size: 28px;
+      line-height: 40px;
+    }
   }
 
   &__learn{
@@ -21,6 +38,10 @@
 
   &__slider-nav {
     transform: translateX(12px);
+
+    @include mobile {
+      transform: none;
+    }
   }
 
   &__items{
@@ -38,4 +59,9 @@
       visibility: visible;
     }
   }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+
 }

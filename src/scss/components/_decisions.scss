@@ -1,48 +1,67 @@
 .decisions {
-    padding-top: 80px;
-    padding-bottom: 80px;
-    background-color: var(--gray-200);
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background-color: var(--gray-200);
 
-    &__left {
-        grid-column: 5 span;
+  .grid {
+    @include tablet {
+      display: block;
+    }
+  }
 
-        img {
-            margin-bottom: -142px;
-        }
+  &__left {
+    grid-column: 5 span;
+
+    img {
+      margin-bottom: -142px;
+
+      @include tablet {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__right {
+    grid-column: 7 span;
+    padding-left: 104px;
+
+    @include tablet {
+      padding-left: 0;
+      padding-top: 30px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 62px;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 37px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--gray-800);
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
     }
 
-    &__right {
-        grid-column: 7 span;
-        padding-left: 104px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 3px;
+      height: 20px;
+      width: 20px;
+      background-image: url(../../img/decisions-check.svg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
+  }
 
-    &__title {
-        margin-bottom: 62px;
-    }
-
-    &__item {
-        position: relative;
-        padding-left: 37px;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 160%;
-        color: var(--gray-800);
-
-        &:not(:last-child) {
-            margin-bottom: 20px;
-        }
-
-        &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 3px;
-            height: 20px;
-            width: 20px;
-            background-image: url(../../img/decisions-check.svg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-    }
+  @include mobile {
+    padding: 40px 0;
+  }
 }

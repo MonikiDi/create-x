@@ -1,13 +1,17 @@
 .hero {
   &__content {
     max-width: 590px;
-    padding: 0 var(--container-offset);
   }
 
   &__btns {
     .btn {
       &:not(:last-child) {
         margin-right: 20px;
+
+        @include mobile {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
       }
     }
   }
@@ -19,6 +23,10 @@
     background-color: var(--white);
     transform: translateY(-50%);
     z-index: 10;
+
+    @include big-desktop {
+      display: none;
+    }
   }
 
   &__prev {
@@ -28,12 +36,16 @@
     background-color: var(--white);
     transform: translateY(-50%);
     z-index: 10;
+
+    @include big-desktop {
+      display: none;
+    }
   }
 
   &__pag {
     counter-reset: pag;
     display: flex;
-    left: calc((100% - 1260px) / 2)!important; 
+    left: calc((100% - 1260px) / 2) !important;
     bottom: 120px !important;
     padding: 0 var(--container-offset);
 
@@ -47,6 +59,10 @@
       height: auto;
       background-color: transparent;
       text-align: left;
+
+      @include small-tablet {
+        width: 25%;
+      }
 
       &::before {
         counter-increment: pag;
@@ -62,6 +78,23 @@
       &::after {
         display: none;
       }
+    }
+
+    @include big-desktop {
+      left: 3% !important;
+    }
+
+    @include minidesk {
+      left: 15px !important;
+    }
+
+    @include small-tablet {
+      bottom: 50px !important;
+      width: calc(100% - 30px) !important;
+    }
+
+    @include mobile {
+      display: none;
     }
   }
 
@@ -91,7 +124,7 @@
 
 .swiper-pagination-bullet-active {
   &::before {
-    color: var(--white)!important;
+    color: var(--white) !important;
   }
 
   .hero__bar {
@@ -116,4 +149,14 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
+  @include small-tablet {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
+  @include mobile {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
 }

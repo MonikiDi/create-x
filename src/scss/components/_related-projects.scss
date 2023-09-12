@@ -8,35 +8,55 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    @include mobile {
+      display: block;
+      margin-bottom: 25px;
+    }
   }
 
   &__title {
     margin: 0;
     padding-bottom: 12px;
     max-width: 710px;
+
   }
 
-  &__learn{
+  &__learn {
     margin-top: 80px;
   }
 
   &__slider-nav {
     transform: translateX(12px);
+
+    @include mobile {
+      transform: none;
+    }
   }
 
-  &__items{
+  &__items {
     padding: 100px;
     margin: -100px;
 
-    .swiper-slide{
+    .swiper-slide {
       opacity: 0;
       visibility: hidden;
       transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
 
-    .slider-visible{
+    .slider-visible {
       opacity: 1;
       visibility: visible;
     }
+
+    .portfolio-item__title {
+      @include small-tablet {
+        min-height: 52px;
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }

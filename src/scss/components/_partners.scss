@@ -6,10 +6,30 @@
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 102px;
+
+    @include minidesk {
+      column-gap: 30px;
+    }
+
+    @include mobile {
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    @include minidesk {
+      display: flex;
+      justify-content: center;
+      grid-column: 3 span;
+    }
   }
 
   &__title{
     margin-bottom: 60px;
+
+    @include mobile {
+      margin-bottom: 30px;
+    }
   }
 
   &__link {
@@ -17,5 +37,9 @@
       outline-offset: 2px;
       outline: 2px solid var(--primary);
     }
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }

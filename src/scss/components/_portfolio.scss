@@ -1,6 +1,10 @@
 .portfolio {
   position: relative;
   padding-bottom: 100px;
+
+  @include mobile {
+    padding-bottom: 40px;
+  }
 }
 
 .portfolio-tabs-nav {
@@ -15,6 +19,16 @@
 
     &:not(:last-child) {
       margin-right: var(--gap);
+    }
+
+    @include small-tablet {
+      margin-bottom: 20px;
+      width: calc((100% - (var(--gap)) * 2) / 3);
+    }
+
+    @include mobile {
+      width: 100%;
+      margin-right: 0 !important;
     }
   }
 
@@ -64,6 +78,12 @@
     transition: color 0.3s ease-in-out;
   }
 
+  @include small-tablet {
+    flex-wrap: wrap;
+    transform: none;
+    margin-top: 30px;
+    justify-content: center;
+  }
 }
 
 .portfolio-tabs {

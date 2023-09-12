@@ -8,7 +8,19 @@
 		margin-bottom: 94px;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: calc(var(--contacts-gap) * 2)
+		gap: calc(var(--contacts-gap) * 2);
+
+    @include minidesk {
+      --contacts-gap: 40px;
+    }
+
+    @include small-tablet {
+      display: block;
+    }
+
+    @include mobile {
+      margin-bottom: 20px;
+     }
 	}
 
 	&__item {
@@ -27,6 +39,10 @@
 				background-size: cover;
 				background-repeat: no-repeat;
 			}
+
+      @include small-tablet {
+        margin-bottom: 30px;
+      }
 		}
 	}
 
@@ -103,7 +119,7 @@
 		.social__link {
 			width: 32px;
 			height: 32px;
-			
+
 			svg {
 				fill: var(--gray-700);
 				opacity: 1;
@@ -123,6 +139,10 @@
 			}
 		}
 	}
+
+  @include mobile {
+    padding: 40px 0;
+   }
 }
 
 .contacts-info__value {

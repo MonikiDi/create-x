@@ -7,8 +7,22 @@
     --about-mission-gap: 94px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: calc(var(--about-mission-gap) * 2)
+    gap: calc(var(--about-mission-gap) * 2);
+
+
+    @include tablet {
+      --about-mission-gap: 30px;
+    }
+
+    @include small-tablet {
+      --about-mission-gap: 10px;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
+
 
   &__item {
     position: relative;
@@ -44,6 +58,12 @@
     &--comfort {
       background-image: url("../img/comfort.svg");
     }
+
+    @include small-tablet  {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
   }
 
   &__subtitle {
@@ -61,5 +81,9 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--gray-700);
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }

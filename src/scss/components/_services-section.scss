@@ -7,14 +7,31 @@
   background-size: cover;
   background: var(--gray-200, #F4F5F6);
 
-  &__list{
+  &__list {
     margin-bottom: 80px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
 .services-list {
   &__item {
     grid-column: 3 span;
+
+    @include tablet {
+      grid-column: 6 span;
+    }
+
+    @include mobile {
+      grid-column: 4 span;
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -29,7 +46,7 @@
   border: 1px solid var(--gray-300);
   border-radius: 4px;
 
-  &::before{
+  &::before {
     content: "";
     position: absolute;
     left: 0;
@@ -46,7 +63,7 @@
     background-color: #424551;
   }
 
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     left: 0;
@@ -60,7 +77,7 @@
     background-color: rgba(#1e212c, 0.6);
   }
 
-  &__content{
+  &__content {
     position: relative;
     z-index: 10;
     display: flex;
@@ -85,10 +102,14 @@
     text-align: center;
     color: var(--gray-900);
     transition: color 0.3s ease-in-out;
+
+    @include minidesk {
+      font-size: 18px;
+    }
   }
 
-  &--construct{
-    &::before{
+  &--construct {
+    &::before {
       background-image: url("../img/services-1.jpg");
     }
   }
@@ -98,20 +119,20 @@
     outline: 2px solid var(--primary);
   }
 
-  &:hover{
-    &::before{
+  &:hover {
+    &::before {
       opacity: 1;
     }
 
-    &::after{
-    opacity: 1;
+    &::after {
+      opacity: 1;
     }
 
-    .services-item__icon{
+    .services-item__icon {
       fill: var(--white);
     }
 
-    .services-item__title{
+    .services-item__title {
       color: var(--white);
     }
   }

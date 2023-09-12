@@ -6,7 +6,19 @@
     --employee-benefits-gap: 94px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: calc(var(--employee-benefits-gap) * 2)
+    gap: calc(var(--employee-benefits-gap) * 2);
+
+    @include tablet {
+      --employee-benefits-gap: 30px;
+    }
+
+    @include small-tablet {
+      --employee-benefits-gap: 10px;
+    }
+
+    @include mobile {
+      display: block;
+    }
   }
 
   &__item {
@@ -43,6 +55,13 @@
     &--salary {
       background-image: url("../img/salary.svg");
     }
+
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
   }
 
   &__subtitle {
@@ -60,5 +79,9 @@
     font-size: 16px;
     line-height: 160%;
     color: var(--gray-700);
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }

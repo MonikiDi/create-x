@@ -2,6 +2,12 @@
   padding: 100px 0;
   background: var(--gray-200);
 
+  &__content {
+    @include small-tablet {
+      display: block;
+    }
+  }
+
   &__item {
     overflow: hidden;
     grid-column: 8 span;
@@ -29,6 +35,9 @@
     color: var(--gray-800);
   }
 
+  @include mobile {
+    padding: 40px 0;
+  }
 }
 
 .history-nav {
@@ -97,5 +106,13 @@
     &--active {
       color: var(--primary);
     }
+
+    @include tablet {
+      font-size: 22px;
+    }
+  }
+
+  @include small-tablet {
+    margin-bottom: 30px;
   }
 }

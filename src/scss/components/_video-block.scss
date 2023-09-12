@@ -69,4 +69,8 @@
       visibility: hidden;
     }
   }
+
+  @include mobile {
+    height: 300px;
+  }
 }

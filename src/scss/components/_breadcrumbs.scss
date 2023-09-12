@@ -41,4 +41,8 @@
       color: var(--active);
     }
   }
+
+  @include small-tablet {
+    flex-wrap: wrap;
+  }
 }

@@ -1,14 +1,31 @@
 .partners-about {
     padding: 120px 0;
     background: var(--white);
+
     &__list {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: 102px;
+      column-gap: 102px;
       row-gap: 37px;
+
+      @include minidesk {
+        column-gap: 30px;
+      }
     }
+
     &__title{
       margin-bottom: 22px;
     }
+
+    &__item {
+      @include minidesk {
+        display: flex;
+        justify-content: center;
+        grid-column: 3 span;
+      }
+    }
+
+    @include mobile {
+      padding: 40px 0;
+    }
   }
-  

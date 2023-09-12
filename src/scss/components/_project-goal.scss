@@ -1,62 +1,85 @@
 .project-goal {
-    padding-top: 30px;
-    padding-bottom: 120px;
+  padding-top: 30px;
+  padding-bottom: 120px;
 
-    &__title {
-        margin-bottom: 41px;
+  .grid {
+    @include small-tablet {
+      display: block;
     }
+  }
 
-    &__descr {
-        margin: 0;
-        margin-bottom: 27px;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 150%;
-        color: var(--gray-800);
-    }
+  &__title {
+    margin-bottom: 41px;
+  }
 
-    &__left {
-        padding-top: 24px;
-        grid-column: 6 span;
-    }
+  &__descr {
+    margin: 0;
+    margin-bottom: 27px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: var(--gray-800);
+  }
 
-    &__right {
-        grid-column: 6 span;
-        display: flex;
-        justify-content: flex-end;
+  &__left {
+    padding-top: 24px;
+    grid-column: 6 span;
+  }
+
+  &__right {
+    grid-column: 6 span;
+    display: flex;
+    justify-content: flex-end;
+
+    @include small-tablet {
+      justify-content: flex-start;
     }
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
 }
 
 .project-info {
-    padding: 25px 60px;
-    padding-right: 40px;
-    width: 495px;
-    min-height: 300px;
-    border-radius: 4px;
-    box-shadow: var(--main-shadow);
-    background: var(--white);
+  padding: 25px 60px;
+  padding-right: 40px;
+  width: 495px;
+  min-height: 300px;
+  border-radius: 4px;
+  box-shadow: var(--main-shadow);
+  background: var(--white);
 
-    &__item {
-        display: flex;
+  &__item {
+    display: flex;
 
-        &:not(:last-child) {
-            margin-bottom: 17px;
-        }
+    &:not(:last-child) {
+      margin-bottom: 17px;
     }
+  }
 
-    &__category {
-        text-transform: uppercase;
-        width: 130px;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 160%;
-        color: var(--gray-900);
-    }
+  &__category {
+    flex-shrink: 0;
+    text-transform: uppercase;
+    width: 130px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--gray-900);
+  }
 
-    &__value {
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 160%;
-        color: var(--gray-700);
-    }
+  &__value {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--gray-700);
+  }
+
+  @include small-tablet {
+    width: 100%;
+  }
+
+  @include mobile {
+    padding: 10px 0;
+  }
 }

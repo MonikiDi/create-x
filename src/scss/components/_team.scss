@@ -20,6 +20,10 @@
         visibility: visible;
       }
     }
+
+    @include tablet {
+      grid-column: 6 span;
+    }
   }
 
   &__link {
@@ -61,6 +65,10 @@
     position: relative;
     margin-bottom: 16px;
     font-size: 0;
+
+    @include tablet {
+      text-align: center;
+    }
   }
 
   &__socials {
@@ -104,5 +112,9 @@
         color: var(--active);
       }
     }
+  }
+
+  @include mobile {
+    padding: 40px 0;
   }
 }
